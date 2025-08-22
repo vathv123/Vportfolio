@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="font-[rr] cursor-none">
+    
+    <!-- scrollBar -->
+    <div id="scrollBarHeight" class="w-3 right-[-5px] absolute bg-black h-[100%] hidden sm:block">
+      <div id="scrollBar" class="w-3 opacity-0 rounded-[50px_0_0_50px] bg-white z-[600] mix-blend-difference fixed setBar"></div>
+    </div>
+
+    <div id="content" class="w-full h-auto">
+      <div class="flex relative">
+        <div class="w-full h-screen bg-white flex justify-center items-center " id="asideLoading">
+          <span class="text-[8rem] sm:text-[14vw] pointer-events-none font-[serif] setIncre" id="increment"></span>
+        </div>
+        <div class="w-full h-auto origin-top flex justify-center page fixed top-0 z-[250]">
+          <nav class="max-w-[990px] w-full px-4 flex justify-center h-[120px] opacity-0" id="fixedDuplication">
+            <ul class="py-4 w-full max-w-[950px] font-[rr] text-[1rem] flex items-center justify-between z-[600] fixed top-0 setHigher" style=" color: white; border: white; mix-blend-mode: difference;">
+              <li>ravath.co</li>
+              <li class="flex gap-4">
+                  <a
+                    href=""
+                    onclick="window.open('https://www.facebook.com/share/16UuTib5tp/?mibextid=wwXIfr', '_blank');"
+                    style="cursor: pointer"
+                  >
+                    Facebook
+                  </a>
+                  <a
+                    href=""
+                    onclick="window.open('https://www.linkedin.com/in/im-boravath-a1b247358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', '_blank');"
+                    style="cursor: pointer"
+                  >
+                    Linkin
+                  </a>
+              </li>
+              <li>hello@ravath.co</li>
+            </ul>
+          </nav>
+        </div>
+        <div id="cursor" class="w-[20px] hidden sm:flex h-[20px] mix-blend-difference bg-white rounded-[50%] z-[350] fixed  justify-center whitespace-nowrap items-center font-[rl] font-bold text-[0.9rem]"></div>
+        <div class="absolute top-0 left-0 h-[100vh] w-full text-white bg-black flex items-center flex-col" id="pageAll">
+          <div id="page1" class="max-w-[990px] w-full px-4 h-auto min-h-[980px] origin-top flex flex-col items-center page relative">
+            <div class="blackHole absolute sm:top-[-310px] top-[-120px] sm:scale-[1] scale-[3]">
+              <video src="video/blackhole.mp4" autoplay="" loop="" muted="" playsinline oncontextmenu="return false;" class="w-full scale-[1.3] h-full object-cover"></video>
+            </div>
+            
+            <div class="max-w-[990px] w-full px-4 p-6 h-[1080px] mt-64 flex pointer-events-none">
+              <p
+                class="text-[1.5rem] sm:text-[2rem] md:text-[3rem] font-[rl] w-full relative leading-[1.1] z-[10] mix-blend-difference"
+                id="textWrap"
+              >
+                <span>
+                  <span>
+                    <i> I'm </i>
+                  </span>
+                  <span>
+                    <i> Vath </i>
+                  </span>
+                  <span> &mdash; </span>
+                  <span> a Web </span>
+                  <span> Developer </span>
+                </span>
+                <span>
+                  <span> With </span>
+                  <span> a focus </span>
+                  <span> on interactive </span>
+                  <span> design, </span>
+                </span>
+                <span>
+                  <span> Motion </span>
+                  <span> design, </span>
+                  <span> and 3d. </span>
+                </span>
+              </p>
+            </div>
+            <div id="line" class="ml-[-190px] sm:block px-3 hidden">
+                <svg width="800" height="500">
+                  <path d="M 10 100 Q 400 100 790 100" stroke="white" fill="transparent" stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="w-full h-[auto] relative">
+              <div class="header__arrow block right-0 absolute w-[1.7rem] h-[5.2rem]" style="transform: translate(0px)">
+                <div
+                  class="header__opening aboslute left-[50%]"
+                  style="
+                    transform: translate(-50%, 0%);
+                    border-right: 3px solid #f2f2f2;
+                    left: 50%;
+                    position: absolute;
+                    top: -175px;
+                  "
+                ></div>
+                <div
+                  class="header__arrow absolute top-0 ml-[0.57px] hidden"
+                  style="
+                    transform: translate(-50%, 0%);
+                    border-right: 3px solid #f2f2f2;
+                    left: 52%;
+                    position: absolute;
+                    top: -35px;
+                  "
+                ></div>
+                <div
+                  class="header__arrow__triangle hidden"
+                  style="
+                    transform: rotate(135deg);
+                    border-color: #f2f2f2;
+                    border-style: solid;
+                    border-width: 2px 2px 0 0;
+                    height: 1.2rem;
+                    left: 51%;
+                    position: absolute;
+                    transform: rotate(135deg);
+                    width: 1.2rem;
+                    transform-origin: 0px 100% 0px;
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-auto bg-black hidden pt-12 justify-center relative" id="set">
+        <div class="page max-w-[990px] w-full px-4 h-auto origin-top font-[rl] bg-black flex flex-col gap-[250px]">
+          <div class="w-full h-auto text-white leading-[1.1] flex sm:flex-nowrap flex-wrap gap-[30px] p-6 justify-between" id="page2">
+              <div class="flex flex-col gap-12 pWrapper setHigher text-[2.8rem]">
+                <p>
+                  I'm a front-end developer who loves creating interactive
+                  designs. I learn, experiment, and build to craft sleek,
+                  user-friendly websites.
+                </p>
+                <p>
+                  I enjoy transforming ideas into engaging visuals and
+                  animations, exploring colors, shapes, and compositions to
+                  create impactful designs.
+                </p>
+                <p>
+                  I'm currently looking for an internship to apply my skills,
+                  gain hands-on experience, and grow as a developer.
+                </p>
+                <p>
+                  I'm eager to collaborate, learn from real-world projects, and
+                  contribute to creating seamless digital experiences.
+                </p>
+              </div>
+              <div class="min-w-[250px] h-auto gap-2 font-[rr] text-white flex flex-col pWrapper setCap">
+                <p class="text-[#a3a3a3bd] text-[1rem]">Education</p>
+                <p class="text-[0.7rem]">
+                  <span class="uppercase">
+                    Royal University of Phnom Penh (RUPP), Phnom Penh
+                    <br />
+                    FEB 2024 TO JULY 2027
+                    <br />
+                  </span>
+                  Scholar
+                </p>
+                <p class="text-[0.7rem]">
+                  <span class="uppercase">
+                    Institute of foreign language (IFL), Phnom Penh
+                    <br />
+                    FEB 2024 TO JULY 2027
+                    <br />
+                  </span>
+                  Scholar
+                </p>
+                <p class="text-[0.7rem]">
+                  <span class="uppercase">
+                    ETEC Center, Phnom Penh
+                    <br />
+                    2024 TO 2026 — 2+ YEARS
+                  </span>
+                  <br />
+                  Enrichment Class
+                </p>
+                <p class="text-[#a3a3a3bd] text-[1rem]">language</p>
+                <p class="text-[0.7rem]">
+                  <span class="uppercase">
+                    Html, css, javascript
+                    <br />
+                    framework — reactjs, tailwind, bootstrap & threejs
+                  </span>
+                  <br />
+                  library — gsap, locomotive, lenis, swiperjs
+                </p>
+                <p class="text-[#a3a3a3bd] text-[1rem]">website</p>
+                <p class="text-[0.7rem]">
+                  <span class="uppercase">
+                    E-mcomerce store, portfolio, bussines landing page
+                    <br />
+                    Modern web developments
+                  </span>
+                  <br />
+                  Innovative, Luxury, Clean, Fresh
+                </p>
+              </div>
+          </div>
+          <div class="max-w-[990px] w-full px-4 h-auto text-white leading-[1.1] flex flex-col gap-3" id="page3">
+            <div class="flex flex-col gap-3">
+              <div>
+                <p class="pWrapper textWrapAll">
+                  Web-based —
+                  <br />
+                  endeavors
+                </p>
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper flex items-center w-full">
+                  <div class="swiper-slide" id="slide1">
+                    <video src="video/web1.mp4" class="w-full h-full object-cover rounded-inherit" autoplay="" loop=""  muted="" playsinline="" oncontextmenu="return false;"></video>
+                  </div>
+                  <div class="swiper-slide" id="slide2">
+                    <video src="video/web2.mp4" class="w-full h-full object-cover rounded-inherit" autoplay="" loop=""  muted="" playsinline="" oncontextmenu="return false;"></video>
+                  </div>
+                  <div class="swiper-slide sm:block hidden" id="slide3">
+                    <a href="https://vathv123.github.io/WFF/src/index.html">
+                        <video src="video/WFF.mp4" class="sm:block hidden w-full h-full object-cover rounded-inherit" autoplay="" loop=""  muted="" playsinline="" oncontextmenu="return false;"></video>
+                    </a>
+                  </div>
+                  <div class="swiper-slide" id="slide4">
+                    <video src="video/web3.mp4" class="w-full h-full object-cover rounded-inherit" autoplay="" loop=""  muted="" playsinline="" oncontextmenu="return false;"></video>
+                  </div>
+                  <div class="swiper-slide" id="slide5">
+                    <video src="video/web4.mp4" class="w-full h-full object-cover rounded-inherit" autoplay="" loop=""  muted="" playsinline="" oncontextmenu="return false;"></video>
+                  </div>
+                </div>
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+              </div>
+            </div>
+            <div class="w-full h-[350px] bg-black text-white flex justify-between font-[RB]">
+              <div class="flex gap-1 flex-col w-full text-[0.9rem]">
+                <p><span class="text-[#858585]">Type</span>Websites</p>
+                <p><span class="text-[#858585]">Status</span>Finished/Not Finished</p>
+                <p><span class="text-[#858585]">Price</span>Depended</p>
+              </div>
+              <div class="max-w-[800px] flex flex-col gap-6 text-[1.3rem]">
+                <p>These websites was created purely for fun, but also as a heartfelt dedication.</p>
+                <p>I poured my time, effort, and creativity into building it from scratch, driven by my passion for movies and design. Every detail you see here reflects my genuine interest and the joy I felt throughout the process. I hope you enjoy exploring it as much as I enjoyed creating it.</p>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[990px] w-full px-4 h-auto text-white leading-[1.1] flex sm:flex-nowrap flex-wrap gap-[30px] p-6 justify-between" id="page4">
+            <div>
+              <div class="flex flex-col gap-12 pWrapper setHigher text-[2.8rem]">
+                <p>
+                  Each project showcases my dedication to creating innovative
+                  solutions and improving my craft. I focus on developing
+                  unique, functional designs.
+                </p>
+                <p>
+                  Through hands-on experience with HTML, CSS, JavaScript, and
+                  other technologies, I continually refine my skills to build
+                  better user interfaces
+                </p>
+                <p>
+                  I love taking on new challenges and pushing my abilities with
+                  complex tasks, always striving to grow as a developer
+                </p>
+                <p>
+                  I'm excited to continue expanding my knowledge and learning
+                  from every project, all while aiming to create intuitive,
+                  user-focused experiences.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div
+                class="min-w-[250px] h-auto gap-2 font-[rr] text-white p-3 flex flex-col pWrapper setCap"
+              >
+                <p class="text-[#a3a3a3bd] text-[1rem] w-full">Skills</p>
+                <p class="text-[0.7rem] w-full">
+                  <span class="uppercase">
+                    Front-End Technologies
+                    <br />
+                  </span>
+                  HTML, CSS, JavaScript, React, Bootstrap, Gsap, Git, Github,
+                  Threejs, Tailwind, Lenis, FramerMotion
+                </p>
+                <p class="text-[#a3a3a3bd] text-[1rem] w-full">
+                  Notable Projects
+                </p>
+                <p class="text-[0.7rem] w-full">
+                  <span class="uppercase">
+                    Portfolio Website
+                    <br />
+                    MARCH 2025
+                    <br />
+                  </span>
+                  A responsive portfolio showcasing my web development skills,
+                  built with HTML, CSS, and JavaScript.
+                </p>
+                <p class="text-[0.7rem] w-full">
+                  <span class="uppercase">
+                    Flower Website
+                    <br />
+                    MARCH 2025
+                    <br />
+                  </span>
+                  A responsive Flower-Web showcasing my web development skills,
+                  built with HTML, CSS, and JavaScript.
+                </p>
+                <p class="text-[0.7rem] w-full">
+                  <span class="uppercase">
+                    Dou Website
+                    <br />
+                    MARCH 2025
+                    <br />
+                  </span>
+                  A responsive clone Dou-Web showcasing my web development
+                  skills, built with HTML, CSS, and JavaScript.
+                </p>
+                <p class="text-[0.7rem] w-full">
+                  <span class="uppercase">
+                    E-commerce Website
+                    <br />
+                    MARCH 2025
+                    <br />
+                  </span>
+                  A responsive E-commerce showcasing my web development skills,
+                  built with HTML, CSS, and JavaScript.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="page5" class="max-w-[990px] w-full px-4  h-auto text-white z-[125] text-[4rem] flex justify-between p-3 font-[rr] relative mt-24">
+            <div class="effect flex gap-4">
+              <div class="marque text-[4rem]">
+                thrive beyond limits
+                <img
+                  src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+                  alt="Creative Branding and Webdesign Agency Amsterdam"
+                />
+              </div>
+              <div class="marque text-[4rem]">
+                thrive beyond limits
+                <img
+                  src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+                  alt="Creative Branding and Webdesign Agency Amsterdam"
+                />
+              </div>
+              <div class="marque text-[4rem]">
+                thrive beyond limits
+                <img
+                  src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+                  alt="Creative Branding and Webdesign Agency Amsterdam"
+                />
+              </div>
+              <div class="marque text-[4rem]">
+                thrive beyond limits
+                <img
+                  src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+                  alt="Creative Branding and Webdesign Agency Amsterdam"
+                />
+              </div>
+              <div class="marque text-[4rem]">
+                thrive beyond limits
+                <img
+                  src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+                  alt="Creative Branding and Webdesign Agency Amsterdam"
+                />
+              </div>
+              <div class="marque text-[4rem]">
+                thrive beyond limits
+                <img
+                  src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg"
+                  alt="Creative Branding and Webdesign Agency Amsterdam"
+                />
+              </div>
+            </div>
+            <div class="w-full flex flex-wrap justify-between">
+              <div class="flex flex-col gap-4">
+                <p class="text-[1.5rem] setCapV2">Contact Me</p>
+                <div class="text-[1rem]">
+                  <p>
+                    Email: <span><u>imboravath@gmail.com</u></span>
+                  </p>
+                  <p>
+                    Github:
+                    <span
+                      ><u
+                        ><a href="https://github.com/vathv123">ravath.com</a></u
+                      ></span
+                    >
+                  </p>
+                  <p>
+                    Phone: <span><i>+855 61 818 077</i></span>
+                  </p>
+                </div>
+              </div>
+              <div class="text-[1.1rem]">
+                <p>
+                  Download my <u id="resume" class="cursor-pointer">Resume</u>
+                </p>
+                <p class="w-full max-w-[350px] text-[1rem]">
+                  Thank you for visiting my portfolio. <br />
+                  Feel free to reach out if you want to collaborate or have any
+                  questions!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="fixed w-[150px] h-[150px] bg-white mix-blend-difference right-[0px] bottom-[0px] gap-3 justify-center items-center flex-col cursor-pointer z-[550] musicPlayed hidden shrink"
+        id="core"
+      >
+        <span class="text-[18px]">Music</span>
+        <i class="fa-solid fa-play text-black play"></i>
+        <i class="fa-solid fa-pause text-black hidden pause"></i>
+        <audio src="video/music.mp3" loop preload="auto"></audio>
+      </div>
+    </div>
+    <!-- scriptJS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.41"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="portfolio.js"></script>
+
+  <style>
+      * {
+        overscroll-behavior: none;
+        scrollbar-width: none;
+        box-sizing: border-box;
+        ::selection {
+          cursor: none;
+        }
+        font-family: RB;
+      }
+      @font-face {
+        font-family: RB;
+        src: url("./font/RoobertTRIAL-Light-BF67243fd502239.otf");
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        overscroll-behavior: none;
+      }
+      @font-face {
+        font-family: rr;
+        src: url("Roobert/RoobertTRIAL-Regular-BF67243fd53fdf2.otf");
+      }
+      @font-face {
+        font-family: rm;
+        src: url("Roobert/RoobertTRIAL-Medium-BF67243fd53e059.otf");
+      }
+      @font-face {
+        font-family: rl;
+        src: url("Roobert/RoobertTRIAL-Light-BF67243fd502239.otf");
+      }
+      ul > li:nth-child(2),
+      ul li:nth-child(3) {
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      ul > li:hover {
+        color: white;
+      }
+      #pageAll {
+        clip-path: inset(0% 0% 0% 100%);
+      }
+      #textWrap span {
+        display: inline-block;
+      }
+      .a {
+        display: inline-block;
+      }
+      @keyframes dashOpening {
+        0% {
+          height: 0px;
+        }
+        100% {
+          height: 8rem;
+          transform: translateY(40px);
+        }
+      }
+      @keyframes arrowMove {
+        0% {
+          height: 0;
+        }
+        100% {
+          opacity: 1;
+          height: 5rem;
+        }
+      }
+      .swiper-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+      .swiper-slide {
+         width: 100%; max-width: 450px; height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s ease;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        position: absolute;
+        top: 120%;
+        color: white;
+        scale: 1.2;
+        z-index: 10000;
+        transition: all 3s ease;
+      }
+      
+      .swiper-button-next {
+        right: 10px;
+      }
+      .swiper-button-prev {
+        left: 10px;
+      }
+      video::-webkit-media-controls {
+        display: none !important;
+      }
+
+      video {
+        pointer-events: none;
+        object-position: 0% 50%;
+      }
+      .download-button {
+        display: none;
+      }
+      .effect {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        position: absolute;
+        top: -250px;
+        background: lawngreen;
+      }
+      .marque {
+        flex-shrink: 0;
+        height: 120px;
+        font-size: 3rem;
+        transform: translateX(-50%);
+        display: flex;
+        font-family: rr;
+        color: black;
+        align-items: center;
+        text-transform: uppercase;
+      }
+      .marque img {
+        width: 7vw;
+        height: 4vw;
+      }
+      #content {
+        overflow: hidden !important;
+      }      
+      video {
+         width: 100%; height: auto;
+         transform: translateZ(0);
+         will-change: transform;
+      }      
+      #line{
+          z-index: 200;
+          overflow: visible;
+      }
+      svg{
+          z-index: 400;
+          overflow: visible;
+      }
+    </style>     
+  </body>
+</html>
