@@ -463,7 +463,6 @@ const pathElement = document.querySelector("svg path");
     alert("For the best experience, please view this on a computer.");
 }
 
-// Lazy load script
 document.addEventListener("DOMContentLoaded", () => {
   const lazyVideos = document.querySelectorAll('.lazy-video');
 
@@ -471,12 +470,12 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if(entry.isIntersecting) {
         const video = entry.target;
-        if(!video.src) {
-          video.src = video.dataset.src; // load actual video
-          video.load(); // tell browser to load
-          video.play().catch(() => {}); // autoplay if allowed
+        if(!video.src && video.dataset.src) { // only set src if not set
+          video.src = video.dataset.src; // assign real video src
+          video.load(); // start loading
+          video.play().catch(() => {}); // play if allowed
         }
-        observer.unobserve(video); // stop observing once loaded
+        observer.unobserve(video); // stop observing this video
       }
     });
   }, { threshold: 0.25 });
